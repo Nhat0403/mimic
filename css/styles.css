@@ -44,6 +44,7 @@ p {
 
 img {
   width: 100%;
+  object-fit: cover;
 }
 
 .flex {
@@ -60,6 +61,10 @@ img {
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 6rem;
+}
+
+.card {
+  display: flex;
 }
 
 .btn {
@@ -81,11 +86,6 @@ a {
 #navbar {
   background-color: var(--main-red);
   color: var(--main-white);
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 
 #navbar ul {
@@ -104,7 +104,7 @@ a {
 /* Kết thúc Navbar */
 
 /* Bắt đầu Welcome */
-#welcome-section {
+.welcome-section {
   height: 100vh;
   background-color: var(--main-gray);
   flex-direction: column;
@@ -146,8 +146,7 @@ a {
 }
 
 .project-img {
-  height: calc(100% - 6.8rem);
-  object-fit: cover;
+  height: calc(100% - 8rem);
 }
 
 .btn-show-all {
@@ -173,11 +172,11 @@ a {
 /* Kết thúc Projects */
 
 /* Bắt đầu Contact */
-#contact {
+.contact-section {
   padding: 0 2rem;
   flex-direction: column;
   text-align: center;
-  height: 80vh;
+  height: 82vh;
   width: 100%;
   background-color: var(--main-gray);
 }
@@ -207,7 +206,7 @@ a {
 /* Kết thúc Contact */
 
 /* Bắt đầu Footer */
-#footer {
+.footer {
   font-weight: 300;
   justify-content: space-evenly;
   padding: 2rem;
@@ -225,6 +224,24 @@ a {
 @media (max-width: 61.25em) {
   html {
     font-size: 200%;
+  }
+  .project-img {
+    height: auto;
+    width: 100%;
+  }
+  #projects .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    height: 100vh;
+  }
+  .contact-header {
+    margin-bottom: 1rem;
+  }
+  #footer .flex {
+    flex-direction: column;
+    text-align: center;
   }
 }
 /* Responsive Mobiles */
